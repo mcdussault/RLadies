@@ -1,0 +1,36 @@
+---
+title: "Using blogdown"
+subtitle: "A gentle introduction to the fun"
+author: "Marie Christine Dussault"
+date: "2018/03/02"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts"]
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+Who am I?
+
+- postdoc
+
+- physical anthropologist
+
+- University of Pretoria
+
+???
+These are slide notes
+
+---
+
+Slide 2
+
+---
