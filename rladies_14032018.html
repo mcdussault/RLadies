@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using blogdown</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Marie Christine Dussault" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Using blogdown
+## A gentle introduction to the fun
+### Marie Christine Dussault
+### 2018/03/02
+
+---
+
+
+
+
+#So, who am I?
+
+- Senior postdoctoral research fellow
+- Physical Anthropologist
+- Department of Anatomy, UP
+- Blogging since **February 2018**
+
+![skellies](images/skellies.gif)
+
+
+???
+These are slide notes
+
+---
+
+#Blogging with the Blogdown package
+
+Starting a blog is with blog down is easier than you think!
+
+![Scary](/images/ahh.gif)
+
+
+Just a few easy steps!
+
+If you need help later on, follow [Blogdown by Xie, Thomas, and Presmanes Hill](https://bookdown.org/yihui/blogdown/) 
+---
+
+#What will you need?
+
+## In R
+
+- Rstudio
+- Working knowledge of R Markdown 
+- The blogdown package (available via CRAN)
+
+
+##Outside R
+
+I (briefly) cover the following necessary steps:
+
+- Git and Github account
+- Netlify account 
+
+
+---
+
+#Git and Github
+
+You will need to create a [Github](https://github.com/) account- Your static site "lives" here 
+
+You will also need to install Git on your machine and enable it in R studio
+![Git/SVN](/images/git_RStudio.png)
+
+
+
+--- 
+
+#Help with Git!
+
+Jenny Bryan's [Happy Git with R](http://happygitwithr.com/)
+
+![Rebase](images/watch-me-diff-watch-me-rebase-smaller.png)
+
+Still from [Heaven King Video](https://www.youtube.com/watch?v=uBWrpVrazzA)
+
+---
+#Create your new Github repo!
+
+Recommendations from [jonthegeek.com](http://jonthegeek.com/2018/02/27/blogging-in-ten-minutes/)
+
+![github_new](images/github_new.png)
+???
+This is where it will differ slightly from the Blogdown book, but I find this workflow simplifies it even more!
+
+repo name doesn't matter!
+Initialise with a Readme file
+
+---
+#Create your RStudio project!
+
+In RStudio, choose File &gt; New Project. 
+
+Choose Version Control &gt; Git
+
+Paste the URL of your git repository
+
+![git_repo](images/git_repo.png)
+
+---
+#And now, Blogdown!
+
+
+```r
+library(blogdown)
+install_hugo()
+new_site()
+```
+
+![blog generated](images/blog_generated.png)
+
+
+---
+#Themes
+
+Themes can be found at the [Hugo](https://themes.gohugo.io/) website
+
+![Hugo website](images/hugo_site.png)
+---
+
+#Installing a theme
+
+Recommended to do at the new_site() step!
+
+
+```r
+new_site(theme = "gcushen/hugo-academic")
+```
+
+
+???
+
+Can be tricky to go backwards and try to change themes after the fact
+Requires messing around with the config.toml file
+May just be less trouble to pick your theme and run with it!
+
+---
+
+#Configuration file
+
+![config_file](images/config1.png)
+
+???
+
+Here we will start tweaking the website a little bit!
+
+
+title: Pick a title for your blog
+google analytics: Account URL if you have one
+discus: Account if you have one
+
+post = the way the URL format of your post will be
+
+name: Whatever you'd like to be known as
+URL: URL to your about section - Can be changed later on!
+
+Github/Twitter: populate with names/links
+
+Description: can be updated if you want
+
+Baseurl - This will be changed later on
+
+---
+
+#About.md
+
+![about](images/about.png)
+???
+
+Can change to update the Title and Date and content
+
+---
+
+#Cleaning out unecessary files
+
+New site is populated with example files.
+
+Navigate to content folder &gt; post &gt; 
+
+Delete the files found inside this folder.
+
+
+![Fresh](images/fresh.gif)
+
+---
+
+#Build/Serve site
+
+Seeing the site is the best part!
+
+Navigate to your Addins dropdown menu 
+
+Select **serve site** and admire the awesomeness in your Viewer window!
+
+![boss](images/boss.gif)
+
+???
+Now you can go back some steps if you want to tweak things. 
+Or start over completely with another theme.
+
+
+---
+#Time to...
+
+![rip](images/rip_bandaid.gif)
+
+
+---
+
+#Commit to Github!
+
+
+![commiting](images/commiting.png)
+
+
+???
+Go select the Git tab in the top right corner
+
+Make sure you stage all the files
+ 
+Include a commit message
+
+Press commit
+
+Then press Push
+
+Follow the instructions asking for username and password if they pop up!
+
+---
+
+#Check if committed properly
+
+![commited](images/commited.png)
+
+---
+
+#Deploying on Netlify
+
+#screengrabs of the process
+
+---
+
+#Writing your first post
+
+---
+
+#Rbind.io 
+
+Requesting on github
+
+---
+
+#Thank you!
+
+Presentation created with the Xaringan package from [Yihui Xue](https://github.com/yihui/xaringan) with the R-Ladies styling from [Alison Presmanes Hill](https://alison.rbind.io/)
+
+![ron](images/ron2.gif)
+    </textarea>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
