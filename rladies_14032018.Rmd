@@ -98,6 +98,8 @@ Still from [Heaven King Video](https://www.youtube.com/watch?v=uBWrpVrazzA)
 Go to [Github New Repository](https://github.com/new) > click the Plus symbol (top right) of your account landing page.
 
 ![github_new](images/github_new.png)
+
+
 ???
 This is where it will differ slightly from the Blogdown book, but I find this workflow simplifies it even more!
 
@@ -147,7 +149,9 @@ new_site(theme = "gcushen/hugo-academic")
 ???
 
 Can be tricky to go backwards and try to change themes after the fact
+
 Requires messing around with the config.toml file
+
 May just be less trouble to pick your theme and run with it!
 
 ---
@@ -162,13 +166,20 @@ Here we will start tweaking the website a little bit!
 
 
 title: Pick a title for your blog
+
 google analytics: Account URL if you have one
+
 discus: Account if you have one
+
 
 post = the way the URL format of your post will be
 
+
 name: Whatever you'd like to be known as
+
 URL: URL to your about section - Can be changed later on!
+
+
 
 Github/Twitter: populate with names/links
 
@@ -271,7 +282,7 @@ Select the repository where your site lives
 
 #Deploying on Netlify
 
-Set the Build Command to hugo_0.19 and the Publish directory to Public
+Set the Build Command to hugo_0.19 and the Publish directory to public
 
 ![deploy](images/deploy.png)
 ---
