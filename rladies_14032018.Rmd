@@ -22,29 +22,36 @@ options(htmltools.dir.version = FALSE)
 
 - Senior postdoctoral research fellow
 - Physical Anthropologist
-- Department of Anatomy, UP
 - Blogging since **February 2018**
 
 ![skellies](images/skellies.gif)
 
 
 ???
-These are slide notes
+I am by no means an authority, but if I can do it as a complete beginner, anyone can. 
 
 ---
 
 #Blogging with the Blogdown package
 
-Starting a blog is with blog down is easier than you think!
+Starting is easier than you think!
 
 ![Scary](/images/what.gif)
 
 
+???
 
+This will be a very basic introduction to starting a blog/website with blogdown
+
+Essentially this is a quick and dirty starting point 
+
+will get you going in a short amount of time, 
+
+if you chose to not tweak things too much!
 
 ---
 
-#In case of emergency later on!
+#In case of emergency!
 
 Follow the advice in [Blogdown by Xie, Thomas, and Presmanes Hill](https://bookdown.org/yihui/blogdown/) 
 
@@ -65,12 +72,12 @@ and the blog post by [@JonTheGeek: Blogging in About Ten Minutes](http://jontheg
 
 ##Outside R
 
-I (briefly) cover the following necessary steps:
-
 - Git and Github account
 - Netlify account 
 
+???
 
+I will **briefly** cover these steps, however there are many good guides online.
 ---
 
 #Git and Github
@@ -93,7 +100,7 @@ Jenny Bryan's [Happy Git with R](http://happygitwithr.com/)
 Still from [Heaven King Video](https://www.youtube.com/watch?v=uBWrpVrazzA)
 
 ---
-#Create your new Github repo!
+#Create your new Github repo
 
 Go to [Github New Repository](https://github.com/new) > click the Plus symbol (top right) of your account landing page.
 
@@ -101,13 +108,16 @@ Go to [Github New Repository](https://github.com/new) > click the Plus symbol (t
 
 
 ???
+
+Once you have a github account
+
 This is where it will differ slightly from the Blogdown book, but I find this workflow simplifies it even more!
 
-repo name doesn't matter!
-Initialise with a Readme file
+repo name doesn't matter! Here I've created a repo called my blog (and if you go to my github account, you can see it there)
+
 
 ---
-#Create your RStudio project!
+#Create your RStudio project
 
 In RStudio, choose File > New Project. 
 
@@ -127,6 +137,12 @@ new_site()
 ```
 
 ![blog generated](images/blog_generated.png)
+
+
+
+???
+
+Blogdown will generate the necessary file structure within your package and populate some example files as well as CSS files for the theme, etc.
 
 
 ---
@@ -172,14 +188,14 @@ google analytics: Account URL if you have one
 discus: Account if you have one
 
 
-post = the way the URL format of your post will be
+post = the way the URL format of your post will be. Unless you want something specific, the default should be suitable
 
 
 name: Whatever you'd like to be known as
 
 URL: URL to your about section - Can be changed later on!
 
-
+About: set up to direct to your "About" file
 
 Github/Twitter: populate with names/links
 
@@ -241,6 +257,7 @@ Or start over completely with another theme.
 
 
 ???
+
 Go select the Git tab in the top right corner
 
 Make sure you stage all the files
@@ -253,11 +270,15 @@ Then press Push
 
 Follow the instructions asking for username and password if they pop up!
 
----
 
+---
 #Check if committed properly
 
 ![commited](images/commited.png)
+
+---
+???
+Go to github and to the repo's page and check if the documents have been committed properly to the repo itself.
 
 ---
 
@@ -269,6 +290,7 @@ Once signed up, click on New Site from Git
 
 ![new_site](images/netlify_newsite.png)
 ---
+
 
 #Deploying on Netlify
 
